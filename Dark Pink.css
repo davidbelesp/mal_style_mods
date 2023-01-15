@@ -274,15 +274,10 @@ a {
 .mal-modal .mal-modal-dialog .mal-modal-content .mal-modal-body .modal-vote-score li a:hover {
     background-color: #ffa0e7 !important;
     color: #ffffff;
+    transition-duration: 0.2s;
 }
 .mal-modal .mal-modal-dialog .mal-modal-content .mal-modal-body .modal-vote-score-footer a:hover {
     background-color: rgba(255, 0, 191, 0.1) !important;
-}
-
-#footer-block {
-    padding: 15px 0;
-    background-color: #333;
-    font-family: Avenir, "lucida grande", tahoma, verdana, arial, sans-serif;
 }
 
 #copyright {
@@ -625,7 +620,6 @@ a {
     width: 1024px;
     margin: 0 auto;
     text-align: center;
-    vertical-align: middle;
 }
 
 .cover-block .image-container {
@@ -747,10 +741,11 @@ a {
     text-align: center;
     vertical-align: middle;
     font-size: 1.6em;
-    color: #d26ab8;
+    color: #785570;
 }
 .status-menu-container .status-menu .status-button:hover {
-  color: violet;
+    transition-duration: 0.3s;
+    color: violet;
 }
 .status-menu-container .status-menu .status-button.on {
     color: #ffa0e7;
@@ -913,10 +908,6 @@ a {
     width: 100%;
     margin: 0 auto;
     border-collapse: collapse;
-}
-
-.list-table > tbody:nth-of-type(2n+1) {
-    /*background-color: #F6F6F6;*/
 }
 
 
@@ -1157,6 +1148,10 @@ a {
     font-size: 0.8rem !important;
 }
 
+.data .priority{
+    color: red;
+}
+
 .list-table .more-info {
     display: none;
 }
@@ -1226,6 +1221,50 @@ a {
     height: 20px;
     font-size: 20px;
     text-align: center;
+}
+
+/*
+* Footer
+*/
+
+#footer-block{
+    background: #222222;
+}
+
+#footer-block > div{
+    display: none;
+}
+
+/*
+* Fancybox
+*/
+
+#fancybox-inner{
+    height: 100%;
+}
+
+#fancybox-inner > div{
+    height: 100%;
+    font-size: 11px !important;
+    color: white;
+}
+
+#fancybox-confirm-no-button, #fancybox-confirm-yes-button{
+    border: none;
+    border-radius: 2px;
+    color: #444;
+    background-color: #ffa0e7;
+}
+
+#fancybox-outer{
+    margin-top: 0 !important;
+    background: #444 !important;
+    border: 3px solid #ffa0e7;
+    border-radius: 10px;
+}
+
+.fancy-bg{
+    display: none;
 }
 
 /*
