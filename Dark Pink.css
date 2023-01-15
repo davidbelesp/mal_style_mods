@@ -1,9 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
 /*
  *   Modded "Dark pink" style made by davidbelesp 
  *   most well done and better looking one
  *   -- for MAL list page
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/*
+* CSS variable normalization
+*/
+
+:root{
+    --gray-bg1: #222;
+    --gray-bg2: #333;
+    --gray-bg3: #444;
+    --pink-main: #ff86e1;
+    --pink-brighter: #ffa0e7;
+    --pink-unselected: #6d4762;
+}
+
+/*
+* Main
 */
 
 #advanced-options {
@@ -12,7 +29,7 @@
     top: 24px;
     left: 0;
     right: 0;
-    background-color: #222222;
+    background-color: var(--gray-bg1);
     display: none;
     width: 860px;
     margin: 0 auto;
@@ -107,13 +124,13 @@
     display: none;
 }
 #advanced-options .sort-widget input[type=radio] + label {
-    background-color: #222222;
+    background-color: var(--gray-bg1);
     display: inline-block;
     width: 56px;
     padding: 5px 0px;
     border: #d26ab8 1px solid;
     border-radius: 4px;
-    color: #323232;
+    color: var(--gray-bg2);
     font-size: 12px;
     text-align: center;
     cursor: pointer;
@@ -128,7 +145,7 @@
     color: #BEBEBE;
 }
 #advanced-options .sort-widget input[type=radio]:checked:disabled + label {
-    background-color: #222222;
+    background-color: var(--gray-bg1);
     border: #d26ab8 1px solid;
     color: #BEBEBE;
 }
@@ -244,7 +261,7 @@
  */
 
 body {
-    background-color: #222222 !important;
+    background-color: var(--gray-bg1) !important;
     margin: 0 0 0 0;
     color: #CCCCCC !important;
     text-align: center;
@@ -257,22 +274,22 @@ td {
 }
 
 a {
-    color: #ffa0e7;
+    color: var(--pink-brighter);
     text-decoration: none;
 }
 
 .mal-modal-content {
-    background-color: #222 !important;
+    background-color: var(--gray-bg1) !important;
     color: #ccc !important;
 }
 .mal-modal .mal-modal-dialog .mal-modal-content button.btn-close {
     color: #ccc !important;
 }
 .mal-modal .mal-modal-dialog .mal-modal-content .mal-modal-body .modal-vote-score li a {
-    border: 1px solid #ffa0e7 !important;
+    border: 1px solid var(--pink-brighter) !important;
 }
 .mal-modal .mal-modal-dialog .mal-modal-content .mal-modal-body .modal-vote-score li a:hover {
-    background-color: #ffa0e7 !important;
+    background-color: var(--pink-brighter) !important;
     color: #ffffff;
     transition-duration: 0.2s;
 }
@@ -368,7 +385,7 @@ a {
     position: absolute;
     top: 25px;
     right: -4px;
-    background-color: #222;
+    background-color: var(--gray-bg1);
     display: none;
     -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
@@ -399,7 +416,7 @@ a {
 }
 
 .header .header-menu .list-menu .icon-menu:hover {
-    background-color: #333
+    background-color: var(--gray-bg2)
 }
 
 .header .header-menu .list-menu .icon-menu svg.icon {
@@ -428,10 +445,10 @@ a {
 }
 
 .list-menu-float .icon-menu {
-    border: 2px solid #ffa0e7;
+    border: 2px solid var(--pink-brighter);
     border-radius: 0px 10px 10px 0px;
     position: relative;
-    background-color: #333 !important;
+    background-color: var(--gray-bg2) !important;
     display: block;
     width: 50px;
     height: 50px;
@@ -532,7 +549,7 @@ a {
 }
 
 .list-menu-float .icon-menu:not(.profile):hover {
-    background-color: #333;
+    background-color: var(--gray-bg2);
     width: 145px;
 }
 
@@ -575,9 +592,9 @@ a {
 
 .list-menu-float .icon-menu.setting:hover .text .link-list-setting,
 .list-menu-float .icon-menu.setting:hover .text .link-style-setting {
-    border: 2px solid #ffa0e7 !important;
+    border: 2px solid var(--pink-brighter) !important;
     position: absolute;
-    background-color: #333;
+    background-color: var(--gray-bg2);
     display: block;
     width: 110px;
     height: 50px;
@@ -602,8 +619,8 @@ a {
 
 .list-container {
     position: relative;
-    background-color: #222222 !important;
-    border: #ff86e1 3px solid;
+    background-color: var(--gray-bg1) !important;
+    border: var(--pink-main) 3px solid;
     border-radius: 25px;
     width: 1058px;
     margin-bottom: 0;
@@ -711,7 +728,7 @@ a {
     width: 1058px;
     height: 46px;
     border: none;
-    background-color: #222222;
+    background-color: var(--gray-bg1);
     z-index: 1
 }
 
@@ -741,14 +758,14 @@ a {
     text-align: center;
     vertical-align: middle;
     font-size: 1.6em;
-    color: #785570;
+    color: var(--pink-unselected);
 }
 .status-menu-container .status-menu .status-button:hover {
     transition-duration: 0.3s;
-    color: violet;
+    color: var(--pink-brighter);
 }
 .status-menu-container .status-menu .status-button.on {
-    color: #ffa0e7;
+    color: var(--pink-brighter);
     font-weight: bold;
 }
 
@@ -757,7 +774,7 @@ a {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    background-color: #ffa0e7;
+    background-color: var(--pink-brighter);
     display: block;
     width: 100%;
     height: 6px;
@@ -815,16 +832,16 @@ a {
 }
 
 .status-menu-container .search-container #search-box.open {
-    background-color: #222222;
+    background-color: var(--gray-bg1);
     color: white;
-    border: 2px solid #ff86e1;
+    border: 2px solid var(--pink-main);
     border-radius: 10px;
     display: inline-block;
     width: 100px;
 }
 
 .status-menu-container .search-container #search-box input {
-    background-color: #222222;
+    background-color: var(--gray-bg1);
     color: white;
     border: none;
     width: 100%;
@@ -854,7 +871,7 @@ a {
 .list-unit .list-status-title {
     position: relative;
     display: table;
-    background-color: #ffa0e7;
+    background-color: var(--pink-brighter);
     width: 1024px;
     height: 38px;
     border-radius: 15px 15px 0px 0px;
@@ -865,7 +882,7 @@ a {
     width: 1024px;
     height: 38px;
     font-size: 2.0em;
-    color: #222222;
+    color: var(--gray-bg1);
     font-weight: bold;
     font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
     text-align: center;
@@ -890,7 +907,7 @@ a {
 .list-unit .list-stats {
     display: none;
     font-family: 'Montserrat', sans-serif;;
-    background-color: #ffa0e7;
+    background-color: var(--pink-brighter);
     width: 1024px;
     height: 30px;
     line-height: 30px;
@@ -919,7 +936,7 @@ a {
     background: rgba(48, 48, 48, 0.6);
     display: table-cell;
     height: 36px;
-    border-bottom: #444 1px solid;
+    border-bottom: var(--gray-bg3) 1px solid;
     text-align: center;
     vertical-align: middle;
 }
@@ -1000,14 +1017,14 @@ a {
 
 .list-table .list-table-header .header-title .link {
     font-size: 11px;
-    color: #ffa0e7;
+    color: var(--pink-brighter);
     text-decoration: none
 }
 
 .list-table .list-table-header .header-title .link.sort {
     position: relative;
     display: inline-block;
-    color: #ffa0e7;
+    color: var(--pink-brighter);
     white-space: nowrap;
     border-radius: 5px;
     -moz-transition-property: all;
@@ -1029,7 +1046,7 @@ a {
 }
 
 .list-table .list-table-header .header-title .sort-icon {
-    color: #ffa0e7;
+    color: var(--pink-brighter);
 }
 
 
@@ -1042,11 +1059,11 @@ a {
     padding: 4px 0;
     text-align: center;
     vertical-align: middle;
-    border-bottom: #444 1px solid
+    border-bottom: var(--gray-bg3) 1px solid
 }
 
 .list-table .list-table-data .data a {
-    color: #ffa0e7 !important;
+    color: var(--pink-brighter) !important;
 }
 
 .list-table .list-table-data a:not(.edit-disabled):hover {
@@ -1062,12 +1079,13 @@ a {
     display: block;
     width: 100%;
     text-align: center;
-    color: rgb(255, 0, 115) !important;
+    color: var(--pink-main) !important;
     font-size: 10px;
     font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
 }
 .list-table .list-table-data .tags .edit:hover {
-    color: rgb(255, 0, 115) !important;
+    transition-duration: 0.2s;
+    color: var(--pink-brighter) !important;
 }
 
 .list-table .list-table-data .tags textarea {
@@ -1148,10 +1166,6 @@ a {
     font-size: 0.8rem !important;
 }
 
-.data .priority{
-    color: red;
-}
-
 .list-table .more-info {
     display: none;
 }
@@ -1161,7 +1175,7 @@ a {
 }
 
 .list-table .more-info .more-content a {
-    color: #ffa0e7;
+    color: var(--pink-brighter);
 }
 .list-table .more-info .more-content a:hover {
     color: violet;
@@ -1228,7 +1242,7 @@ a {
 */
 
 #footer-block{
-    background: #222222;
+    background: var(--gray-bg1);
 }
 
 #footer-block > div{
@@ -1252,14 +1266,14 @@ a {
 #fancybox-confirm-no-button, #fancybox-confirm-yes-button{
     border: none;
     border-radius: 2px;
-    color: #444;
-    background-color: #ffa0e7;
+    color: var(--gray-bg3);
+    background-color: var(--pink-brighter);
 }
 
 #fancybox-outer{
     margin-top: 0 !important;
-    background: #444 !important;
-    border: 3px solid #ffa0e7;
+    background: var(--gray-bg3) !important;
+    border: 3px solid var(--pink-brighter);
     border-radius: 10px;
 }
 
@@ -1297,7 +1311,7 @@ a {
     color: #7790e9 !important;
 }
 .score-10{
-    color:#ff86e1 !important;
+    color:var(--pink-main) !important;
 }
 .score-na{
     display: none;
